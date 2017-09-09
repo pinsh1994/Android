@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.philipp.studienplaner.Menu_activity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:layout_constraintRight_toLeftOf="@+id/button_1"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/button_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:text="Module"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="8dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:text="Stundenplan"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/button_1"
+        app:layout_constraintTop_toBottomOf="@+id/button_1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/button_1"
+        android:layout_marginTop="50dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:text="Notenschnitt"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/button_2"
+        app:layout_constraintTop_toBottomOf="@+id/button_2"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/button_2"
+        android:layout_marginTop="50dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:text="Empfehlungen"
+        tools:layout_editor_absoluteY="390dp"
+        tools:layout_editor_absoluteX="5dp" />
+
+</android.support.constraint.ConstraintLayout>
