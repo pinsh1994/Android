@@ -1,6 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/my_toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/upperView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/grade_average_total"
+            android:textSize="30sp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+        </TextView>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Button 1" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/grade_average"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginBottom="38dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/grade_average_mi"
+        android:textSize="30sp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/grade_average_mi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginBottom="38dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/grade_average_inf"
+        android:textSize="30sp"
+        android:layout_marginLeft="6sp"
+        android:layout_marginRight="6sp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/grade_average_inf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginBottom="38dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"/>
+
+
+
 
 </LinearLayout>
