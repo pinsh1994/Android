@@ -10,12 +10,12 @@ import android.widget.Button;
  * Created by Philipp on 09.09.2017.
  */
 
-public class menu_activity extends Activity implements View.OnClickListener {
+public class menu_activity extends Activity {
 
-    private Button module;
-    private Button stundenplan;
-    private Button notenschnitt;
-    private Button empfehlungen;
+    private Button Module;
+    private Button Stundenplan;
+    private Button Notenschnitt;
+    private Button Empfehlungen;
 
 
 
@@ -23,47 +23,46 @@ public class menu_activity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         setupUI();
+        waitForAction();
 
     }
 
 
     private void setupUI(){
-        module = (Button) findViewById(R.id.button_1);
-        module.setOnClickListener(this);
-        stundenplan =(Button) findViewById(R.id.button_2);
-        stundenplan.setOnClickListener(this);
-        notenschnitt = (Button) findViewById(R.id.button_3);
-        notenschnitt.setOnClickListener(this);
-        empfehlungen = (Button) findViewById(R.id.button_4);
-        empfehlungen.setOnClickListener(this);
+        Module = (Button) findViewById(R.id.button_1);
+        Stundenplan=(Button) findViewById(R.id.button_2);
+        Notenschnitt= (Button) findViewById(R.id.button_3);
+        Empfehlungen = (Button) findViewById(R.id.button_4);
 
     }
+    private void waitForAction(){
+        Module.setOnClickListener((View.OnClickListener) this);
+        Stundenplan.setOnClickListener((View.OnClickListener) this);
+        Notenschnitt.setOnClickListener((View.OnClickListener) this);
+        Empfehlungen.setOnClickListener((View.OnClickListener) this);
+    }
 
+    private void onClick(View v){
+        if(v == findViewById(R.id.button_1)){
+            Intent intent=new Intent(menu_activity.this,module_activity.class);
 
-    @Override
-    public void onClick(View v){
+            startActivity(intent);
+        }
+        else if(v == findViewById(R.id.button_2)){
+            Intent intent=new Intent(menu_activity.this,Stundenplan_activity.class);
 
-        switch(v.getId()){
+            startActivity(intent);
+        }
+        else if(v == findViewById(R.id.button_3)){
+            Intent intent=new Intent(menu_activity.this,notenschnitt_activity.class);
 
-            case R.id.button_1:
-                startActivity(new Intent(menu_activity.this, Studienauswahl_activity.class));
-                break;
-            case R.id.button_2:
-                startActivity(new Intent(menu_activity.this, Stundenplan_activity.class));
-                break;
-            case R.id.button_3:
-                startActivity(new Intent(menu_activity.this, notenschnitt_activity.class));
-                break;
-            case R.id.button_4:
-                startActivity(new Intent(menu_activity.this, empfehlungen_activity.class));
-                break;
-            default:
-                break;
+            startActivity(intent);
+        }
+        else if(v == findViewById(R.id.button_4)){
+            Intent intent=new Intent(menu_activity.this,empfehlungen_activity.class);
 
+            startActivity(intent);
         }
 
     }
-
-
-
 }
